@@ -32,7 +32,8 @@ sysinfo.txt
 .vscode/
 *.swp
 *.swo
-*~
+
+# Keep Unity package tilde folders such as Samples~ and Documentation~ trackable.
 
 # OS files
 .DS_Store

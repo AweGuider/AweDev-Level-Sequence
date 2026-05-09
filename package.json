@@ -5,6 +5,16 @@
   "description": "Reusable level definition, sequence navigation, and editor validation tools for Unity projects.",
   "unity": "2022.3",
   "license": "MIT",
+  "files": [
+    "Runtime",
+    "Editor",
+    "Tests",
+    "Samples~",
+    "Documentation~",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.md"
+  ],
   "keywords": [
     "unity",
     "upm",
