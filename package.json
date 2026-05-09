@@ -6,19 +6,34 @@
   "unity": "2022.3",
   "license": "MIT",
   "keywords": [
+    "unity",
+    "upm",
     "level",
+    "levels",
     "sequence",
     "scene",
+    "scene-management",
     "navigation",
+    "build-settings",
     "editor"
   ],
   "author": {
     "name": "AweDev"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AweGuider/com.awedev.level-sequence.git"
+  },
+  "documentationUrl": "https://github.com/AweGuider/com.awedev.level-sequence/blob/main/Documentation~/level-sequence.md",
+  "changelogUrl": "https://github.com/AweGuider/com.awedev.level-sequence/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/AweGuider/com.awedev.level-sequence/blob/main/LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/AweGuider/com.awedev.level-sequence/issues"
+  },
   "samples": [
     {
       "displayName": "Basic Level Flow",
-      "description": "Minimal scripts and notes for wiring a LevelSequenceNavigator into a simple scene flow.",
+      "description": "Small menu and level scenes with trigger scripts and sample LevelDefinition / LevelSequence assets.",
       "path": "Samples~/Basic Level Flow"
     }
   ]

@@ -1,15 +1,38 @@
 # AweDev Level Sequence
 
-Reusable level definition, ordered sequence navigation, and editor validation tools for Unity.
+Reusable level definition, ordered sequence navigation, and editor validation tools for Unity projects.
 
-## Install
+Use this package when a project needs a small ScriptableObject-based level list, predictable next-level navigation, Build Settings checks, and replaceable scene loading without bringing in a larger progression framework.
 
-Install from Git in Unity Package Manager:
+## Key Features
+
+- `LevelDefinition` assets for stable level IDs, display names, scene references, and optional reference images.
+- `LevelSequence` assets for ordering levels and choosing an optional build start level.
+- `LevelSequenceNavigator` and `LevelSequenceNavigatorBehaviour` for runtime navigation.
+- Replaceable scene loading through `ILevelSceneLoader`.
+- Inspector validation for duplicate IDs, null entries, missing scene paths, and Build Settings drift.
+- Explicit Build Settings sync from the `LevelSequence` inspector.
+- Optional build prompt and strict build blocking through Project Settings.
+- Reference image capture from the active game camera.
+- Minimal `Basic Level Flow` sample under `Samples~`.
+
+## Installation
+
+Install from Git URL in Unity Package Manager:
 
 1. Open `Window > Package Manager`.
 2. Click `+` and choose `Add package from git URL...`.
-3. Enter the package repository URL.
-4. Select `AweDev Level Sequence` after Unity resolves the package.
+3. Enter:
+
+```text
+https://github.com/AweGuider/com.awedev.level-sequence.git
+```
+
+For a tagged release, append the tag:
+
+```text
+https://github.com/AweGuider/com.awedev.level-sequence.git#v0.1.0
+```
 
 ## Quick Start
 
@@ -20,36 +43,9 @@ Install from Git in Unity Package Manager:
 5. Open the `LevelSequence` asset and click `Sync Build Settings`.
 6. Call `MoveToNextLevel`, `SetLevel`, or `SetLevelById` from UI, triggers, or code.
 
-## Runtime
+## Sample
 
-Create `LevelDefinition` assets for each level, assign their scene assets, then add them to a `LevelSequence`. Use `LevelSequenceNavigator` directly from code or `LevelSequenceNavigatorBehaviour` in a scene to resolve levels, move to the next level, and request scene loads.
-
-`UnitySceneLoader` is the default loader and uses Unity scene management. Host projects can replace it with an `ILevelSceneLoader` implementation for addressables, additive loading, fades, loading screens, save gates, or tests.
-
-## Editor Tools
-
-The `LevelSequence` inspector reports duplicate IDs, null entries, scene path issues, and Build Settings drift. The sync button updates Build Settings only when clicked.
-
-`Project Settings > AweDev > Level Sequence` configures editor-only tooling:
-
-- active sequence for validation
-- optional build blocking
-- optional Build Settings sync prompt
-- reference image capture folder, filename format, and resolution
-
-Runtime navigation does not depend on these Project Settings.
-
-## Reference Images
-
-The `LevelDefinition` inspector can capture a PNG reference image from the active game camera. The default output folder is `Assets/<UnityProjectName>/Level/Reference Images`, and the default filename format is `{levelId}_reference`. Project Settings can switch the default folder source from Unity project name to Product Name.
-
-Repeated captures overwrite the generated file for that level. If the level currently references a different manually assigned texture, the inspector asks for confirmation before replacing the reference.
-
-Filename format tokens include Level ID `{levelId}`, asset name `{assetName}`, display name `{displayName}`, and scene name `{sceneName}`.
-
-## Samples
-
-Import `Basic Level Flow` from Package Manager to get a minimal menu, level scenes, trigger scripts, and sample `LevelDefinition` / `LevelSequence` assets.
+Import `Basic Level Flow` from Package Manager to get a small menu scene, two level scenes, trigger scripts, and sample `LevelDefinition` / `LevelSequence` assets.
 
 After importing the sample:
 
@@ -60,9 +56,40 @@ After importing the sample:
 
 The sample uses built-in Unity text components and does not require TextMesh Pro.
 
+## Basic Runtime Usage
+
+`UnitySceneLoader` is the default loader. It loads by scene name, so the target scenes must be enabled in Build Settings.
+
+```csharp
+using AweDev.LevelSequence;
+using UnityEngine;
+
+public sealed class NextLevelButton : MonoBehaviour
+{
+    [SerializeField] private LevelSequenceNavigatorBehaviour _navigator;
+
+    public void LoadNextLevel()
+    {
+        _navigator.MoveToNextLevel();
+    }
+}
+```
+
+Host projects can replace scene loading by implementing `ILevelSceneLoader` for addressables, loading screens, fades, additive scenes, save gates, or tests.
+
+## Detailed Documentation
+
+See [Documentation~/level-sequence.md](Documentation~/level-sequence.md) for the full workflow, Project Settings, Build Settings validation, reference image capture, custom scene loaders, troubleshooting, and extension points.
+
 ## Known Limitations
 
-- The default `UnitySceneLoader` loads scenes by scene name and requires those scenes to be enabled in Build Settings.
+- `UnitySceneLoader` requires level scenes to be enabled in Build Settings.
+- Build Settings sync mutates Build Settings only when explicitly invoked.
 - Build blocking and build-sync prompts are opt-in editor tools.
+- Project Settings configure editor tooling; runtime navigation uses the `LevelSequence` assigned in scene components or code.
 - Reference image capture is editor-only and writes PNG files under the host project's `Assets` folder.
-- Addressables, loading screens, fades, save gates, and additive loading should be implemented through a custom `ILevelSceneLoader`.
+- Addressables and custom transition flows require a custom `ILevelSceneLoader`.
+
+## License
+
+MIT. See [LICENSE.md](LICENSE.md).
