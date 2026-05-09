@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca980525a7ce6f45a7ab288290c1440, type: 3}
+  m_Name: LD_Sample_Level_B
+  m_EditorClassIdentifier: 
+  _levelId: sample_level_b
+  _displayName: Sample Level B
+  _description: Second sample level.
+  _referenceImage: {fileID: 2800000, guid: 47837ec01400cd249935b7f762bf73f8, type: 3}
+  _sceneAsset: {fileID: 102900000, guid: d20fa885c1e4e7c4bb8b6d698b29fa2c, type: 3}
+  _sceneName: Sample Level B
+  _scenePath: 

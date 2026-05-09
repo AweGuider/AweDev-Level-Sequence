@@ -1,0 +1,18 @@
+{
+  "name": "AweDev.LevelSequence.Editor",
+  "rootNamespace": "AweDev.LevelSequence.Editor",
+  "references": [
+    "AweDev.LevelSequence.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

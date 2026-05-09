@@ -1,0 +1,22 @@
+{
+  "name": "AweDev.LevelSequence.Editor.Tests",
+  "rootNamespace": "AweDev.LevelSequence.Editor.Tests",
+  "references": [
+    "AweDev.LevelSequence.Runtime",
+    "AweDev.LevelSequence.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}

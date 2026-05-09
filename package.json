@@ -1,0 +1,25 @@
+{
+  "name": "com.awedev.level-sequence",
+  "version": "0.1.0",
+  "displayName": "AweDev Level Sequence",
+  "description": "Reusable level definition, sequence navigation, and editor validation tools for Unity projects.",
+  "unity": "2022.3",
+  "license": "MIT",
+  "keywords": [
+    "level",
+    "sequence",
+    "scene",
+    "navigation",
+    "editor"
+  ],
+  "author": {
+    "name": "AweDev"
+  },
+  "samples": [
+    {
+      "displayName": "Basic Level Flow",
+      "description": "Minimal scripts and notes for wiring a LevelSequenceNavigator into a simple scene flow.",
+      "path": "Samples~/Basic Level Flow"
+    }
+  ]
+}
