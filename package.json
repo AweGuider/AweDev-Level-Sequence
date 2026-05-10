@@ -1,6 +1,6 @@
 {
   "name": "com.awedev.level-sequence",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "displayName": "AweDev Level Sequence",
   "description": "Reusable level definition, sequence navigation, and editor validation tools for Unity projects.",
   "unity": "2022.3",
