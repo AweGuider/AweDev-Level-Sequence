@@ -1,19 +1,29 @@
 {
   "name": "com.awedev.level-sequence",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "AweDev Level Sequence",
   "description": "Reusable level definition, sequence navigation, and editor validation tools for Unity projects.",
   "unity": "2022.3",
   "license": "MIT",
   "files": [
     "Runtime",
+    "Runtime.meta",
     "Editor",
+    "Editor.meta",
     "Tests",
+    "Tests.meta",
     "Samples~",
+    "Samples~.meta",
     "Documentation~",
+    "Documentation~.meta",
     "README.md",
+    "README.md.meta",
     "CHANGELOG.md",
-    "LICENSE.md"
+    "CHANGELOG.md.meta",
+    "LICENSE.md",
+    "LICENSE.md.meta",
+    "package.json",
+    "package.json.meta"
   ],
   "keywords": [
     "unity",
