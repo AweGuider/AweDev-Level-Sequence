@@ -31,7 +31,7 @@ https://github.com/AweGuider/com.awedev.level-sequence.git
 For a tagged release, append the tag:
 
 ```text
-https://github.com/AweGuider/com.awedev.level-sequence.git#v0.1.0
+https://github.com/AweGuider/com.awedev.level-sequence.git#v0.1.2
 ```
 
 ## Quick Start
