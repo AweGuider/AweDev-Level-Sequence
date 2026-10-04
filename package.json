@@ -42,13 +42,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AweGuider/com.awedev.level-sequence.git"
+    "url": "https://github.com/AweGuider/AweDev-Level-Sequence.git"
   },
-  "documentationUrl": "https://github.com/AweGuider/com.awedev.level-sequence/blob/main/Documentation~/level-sequence.md",
-  "changelogUrl": "https://github.com/AweGuider/com.awedev.level-sequence/blob/main/CHANGELOG.md",
-  "licensesUrl": "https://github.com/AweGuider/com.awedev.level-sequence/blob/main/LICENSE.md",
+  "documentationUrl": "https://github.com/AweGuider/AweDev-Level-Sequence/blob/main/Documentation~/level-sequence.md",
+  "changelogUrl": "https://github.com/AweGuider/AweDev-Level-Sequence/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/AweGuider/AweDev-Level-Sequence/blob/main/LICENSE.md",
   "bugs": {
-    "url": "https://github.com/AweGuider/com.awedev.level-sequence/issues"
+    "url": "https://github.com/AweGuider/AweDev-Level-Sequence/issues"
   },
   "samples": [
     {

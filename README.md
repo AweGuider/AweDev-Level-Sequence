@@ -4,6 +4,15 @@ Reusable level definition, ordered sequence navigation, and editor validation to
 
 Use this package when a project needs a small ScriptableObject-based level list, predictable next-level navigation, Build Settings checks, and replaceable scene loading without bringing in a larger progression framework.
 
+<table>
+<tr>
+<td width="50%" valign="top"><img src="Documentation~/images/level-sequence-inspector.png" alt="LevelSequence inspector with Build Settings check, health status and an ordered list of 17 levels"><br><sub><b><code>LevelSequence</code></b> in production in Pixel Break: 17 ordered levels, a build start override, a Build Settings drift warning and one-click sync.</sub></td>
+<td width="50%" valign="top"><img src="Documentation~/images/level-definition-reference.png" alt="LevelDefinition inspector with level ID, display name, scene reference and a captured reference image of the Pixel Break hub"><br><sub><b><code>LevelDefinition</code></b>: a stable ID, display name and scene reference, plus a reference image captured from the game camera (here, the Pixel Break hub).</sub>
+<br><br>
+<img src="Documentation~/images/build-sync-prompt.png" alt="Build prompt warning that the Level Sequence is out of sync with Build Settings"><br><sub><b>Build prompt</b>: the optional check that catches the same drift before a build goes out.</sub></td>
+</tr>
+</table>
+
 ## Key Features
 
 - `LevelDefinition` assets for stable level IDs, display names, scene references, and optional reference images.
@@ -25,13 +34,13 @@ Install from Git URL in Unity Package Manager:
 3. Enter:
 
 ```text
-https://github.com/AweGuider/com.awedev.level-sequence.git
+https://github.com/AweGuider/AweDev-Level-Sequence.git
 ```
 
 For a tagged release, append the tag:
 
 ```text
-https://github.com/AweGuider/com.awedev.level-sequence.git#v0.1.2
+https://github.com/AweGuider/AweDev-Level-Sequence.git#v0.1.2
 ```
 
 ## Quick Start
